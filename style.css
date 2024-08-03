@@ -147,6 +147,10 @@ label{
   display: none;
 }
 
+a{
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 1400px) {
   
