@@ -1,0 +1,292 @@
+*{
+  font-family: "Montserrat", sans-serif;
+  cursor: default;
+}
+
+body{
+  background-image: url(./images/bg-bottom.svg), url(./images/bg-top.svg);
+  background-position: bottom left, top right;
+  background-repeat: no-repeat;
+  background-color: hsl(240, 78%, 98%);
+}
+
+.container{
+  overflow: auto;
+}
+
+.pricing-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.title h1{
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(233, 13%, 49%);
+  margin: 0 0 2rem 0;
+}
+
+#switch{
+  margin-bottom: 3.2rem;
+  user-select: none;
+}
+#switch input{
+  float:none;
+  margin-left:0.7rem; 
+  margin-right:0.7rem;
+  width: 48px; 
+  height: 24px;
+  cursor: pointer;
+}
+
+#switch .form-check-input{
+  background-color: hsl(236, 72%, 79%);
+  border-color: hsl(236, 72%, 79%);
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+#switch .form-check-input:checked{
+  background-color: hsl(236, 72%, 79%);
+  border-color: hsl(236, 72%, 79%);
+}
+
+#switch .form-check-input:focus {
+  border-color: hsl(0, 0, 0);
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+
+label{
+  line-height: 1.9rem;
+  font-size: 0.85rem;
+  color:  hsl(234, 14%, 74%);
+  font-weight: 600;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.basic-plan, .professional-plan, .master-plan {
+  width: 355px;
+  max-height: 460px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2.5rem 2.8rem 2rem 2.8rem;
+  color: hsl(233, 13%, 49%);
+  font-weight: 600;
+  z-index: 0;
+}
+
+.professional-plan{
+  max-height: 508px;
+  background: linear-gradient(hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+  color: white;
+  padding: 4rem 2.8rem 3.5rem 2.8rem;
+  margin: 0 -0.5rem;
+  z-index: 1;
+}
+
+.professional-plan .plan-price{
+  color: white;
+}
+.plan-price{
+  font-size: 4rem;
+  color: hsl(232, 13%, 33%);
+  font-weight: 800;
+}
+
+.plan-price #dollar{
+  position: relative;
+  font-size: 2.3rem;
+  bottom: 10px;
+  right: 10px;
+}
+
+.plan-button{
+  background: linear-gradient(hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  margin-top: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+.plan-button:hover{
+  background: white;
+  border: 1px solid hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+}
+
+.professional-plan .plan-button{
+  position: relative;
+  top: 8px;
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+
+.professional-plan .plan-button:hover{
+  background: rgba(255, 255, 255, 0);
+  color: white;
+  border: 1px solid white;
+}
+
+.monthly{
+  display: none;
+}
+
+
+@media screen and (max-width: 1400px) {
+  
+  .basic-plan, .professional-plan, .master-plan {
+    width: 335px;
+    height: 430px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2.5rem 2.8rem 2rem 2.8rem;
+    color: hsl(233, 13%, 49%);
+    font-weight: 600;
+    z-index: 0;
+  }
+  
+  .professional-plan{
+    height: 468px;
+    background: linear-gradient(hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+    color: white;
+    padding: 4rem 2.8rem 3.5rem 2.8rem;
+    margin: 0 -0.5rem;
+    z-index: 1;
+  }
+  
+  .professional-plan .plan-price{
+    color: white;
+  }
+  .plan-price{
+    font-size: 3rem;
+    color: hsl(232, 13%, 33%);
+    font-weight: 800;
+  }
+  
+  .plan-price #dollar{
+    position: relative;
+    font-size: 2.3rem;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .plan-price #dollar{
+    position: relative;
+    font-size: 2rem;
+    bottom: 6px;
+    right: 8px;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  
+  .pricing-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  
+  .title h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: hsl(233, 13%, 49%);
+    margin: 1rem 0 2rem 0;
+  }
+  
+  .pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 25px;
+    margin-bottom: 3rem;
+  }
+  
+  .basic-plan, .professional-plan, .master-plan {
+    background-color: white;
+    height: auto;
+    border-radius: 10px;
+    padding: 1.8rem 1.5rem;
+    color: hsl(233, 13%, 49%);
+    font-weight: 600;
+    z-index: 0;
+  }
+  
+  .professional-plan{
+    background: linear-gradient(hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+    color: white;
+    height: auto;
+    margin: 0 0;
+    padding: 1.8rem 1.5rem;
+    z-index: 1;
+  }
+  
+  .professional-plan .plan-price{
+    color: white;
+  }
+  .plan-price{
+    font-size: 3.5rem;
+    color: hsl(232, 13%, 33%);
+    font-weight: 800;
+  }
+  
+  .plan-price #dollar{
+    position: relative;
+    font-size: 2rem;
+    bottom: 8px;
+    right: 8px;
+  }
+  
+  .plan-button{
+    background: linear-gradient(hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 0.8rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .plan-button:hover{
+    background: white;
+    border: 1px solid hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+  }
+  
+  .professional-plan .plan-button{
+    position: relative;
+    top: auto;
+    background: white;
+    color: hsl(237, 63%, 64%);
+  }
+  
+  .professional-plan .plan-button:hover{
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    border: 1px solid white;
+  }
+
+}
