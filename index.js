@@ -8,3 +8,15 @@ $(":checkbox").on("click", function() {
         $(".Annually").show();
     }
 })
+
+$(document).keydown(function() {
+    $(":checkbox").click();
+    check = $(":checkbox").is(":checked");
+    if(check === true) {
+        $(".Annually").hide();
+        $(".monthly").show();
+    } else {
+        $(".monthly").hide();
+        $(".Annually").show();
+    }
+})
